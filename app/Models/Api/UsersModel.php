@@ -13,7 +13,9 @@ class UsersModel extends Model
     protected $table = 'tech_category';
 
     function getdata(){
-        
+        $flights = UsersModel::where('category_flag', 0)
+               ->get();
+               print_r($flights);die;
         return 2;
     }
 }
