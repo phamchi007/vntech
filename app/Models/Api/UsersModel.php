@@ -12,10 +12,10 @@ class UsersModel extends Model
      */
     protected $table = 'tech_category';
 
-    function getdata(){
-        $flights = UsersModel::where('category_flag', 0)
-               ->get();
-               print_r($flights);die;
+    function getDataList(){
+        
+        $data_list = UsersModel::where('category_flag', 0)->paginate(1)->toArray();
+                    print_r($data_list);die;
         return 2;
     }
 }
