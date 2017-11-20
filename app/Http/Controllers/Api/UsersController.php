@@ -17,7 +17,10 @@ class UsersController extends Controller
 
         $users_object = new UsersModel;
         $test = $users_object->getDataList();
-        print_r($test);die;
+        $rs = array();
+        $rs['status'] = 1;
+        $rs['data'] = $test;
+        echo json_encode($rs);exit;
     }
 }
 ?>

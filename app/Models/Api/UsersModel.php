@@ -15,8 +15,8 @@ class UsersModel extends Model
     function getDataList(){
         
         $data_list = UsersModel::where('category_flag', 0)->paginate(1)->toArray();
-                    print_r($data_list);die;
-        return 2;
+
+        return $data_list;
     }
 }
 ?>
