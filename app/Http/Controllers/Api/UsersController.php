@@ -14,7 +14,6 @@ class UsersController extends Controller
     }
     
     public function index(){
-
         $users_object = new UsersModel;
         $test = $users_object->getDataList();
         $rs = array();
