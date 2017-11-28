@@ -13,7 +13,7 @@ class UsersController extends Controller
         
     }
     
-    public function index(){
+    public function index(){ print_r(1);die;
         $users_object = new UsersModel;
         $test = $users_object->getDataList();
         $rs = array();

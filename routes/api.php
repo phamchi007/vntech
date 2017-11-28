@@ -13,6 +13,8 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return 2;
-});
+Route::group(['middleware' => ['auth:api']], function () {
+        Route::get('/users', function (Request $request) {
+             return response()->json(['name' => 'test']);
+        });
+    });
