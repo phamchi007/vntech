@@ -17,3 +17,5 @@ Route::get('/', function () {
 Route::get('/test', function (Request $request) {
     return 1;
 });*/
+Route::get('/api/users', 'Api\UsersController@index'); 
+Route::get('/api/login', 'Api\UsersController@login');

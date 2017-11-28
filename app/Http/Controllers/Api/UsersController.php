@@ -21,5 +21,9 @@ class UsersController extends Controller
         $rs['data'] = $test;
         echo json_encode($rs);exit;
     }
+
+    public function login(Request $request){
+        print_r(1);die;
+    }
 }
 ?>

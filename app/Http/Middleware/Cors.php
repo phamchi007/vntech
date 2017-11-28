@@ -14,7 +14,7 @@ class Cors
      * @return mixed
      */
     public function handle($request, Closure $next)
-    {
+    { 
         if($request->server('HTTP_ORIGIN')) {
             $origin = $request->server('HTTP_ORIGIN');
             if($origin) {
